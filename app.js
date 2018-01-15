@@ -7,10 +7,11 @@ var passport = require('passport');
 var session = require('express-session');
 
 var app = new Express();
+//TODO: you need to change it according to your database configuration
 var config = {
-    server    : 'GDC-MANISHK-LPT\\SQLEXPRESS01',
+    server    : 'localhost\\SQLEXPRESS01',
     user      : 'sa',
-    password  : 'Passw0rd!',
+    password  : 'sa$@12!',
     database  : 'Books'
 }
 
