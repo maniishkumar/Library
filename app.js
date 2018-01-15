@@ -1,27 +1,10 @@
 var Express = require('express');
-// var mysql      = require('mysql');
-var sql = require('mssql');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var passport = require('passport');
 var session = require('express-session');
 
 var app = new Express();
-//TODO: you need to change it according to your database configuration
-var config = {
-    server    : 'localhost\\SQLEXPRESS01',
-    user      : 'sa',
-    password  : 'sa$@12!',
-    database  : 'Books'
-}
-
-sql.connect(config, function(err){
-    if (err) {
-        console.error('error connecting: ' + err.stack);
-        return;
-    }
-    console.log('connected');
-});
 var nav = [{
     Link: '/Books',
     Text: 'Books'

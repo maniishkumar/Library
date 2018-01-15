@@ -1,5 +1,4 @@
 var express = require('express');
-var sql = require('mssql');
 var bookRouter = express.Router();
 var mongodb = require('mongodb').MongoClient;
 var ObjectId = require('mongodb').ObjectId;
@@ -7,10 +6,10 @@ var ObjectId = require('mongodb').ObjectId;
 var router = function(nav){
 
     bookRouter.use(function(req, res, next){
-      if(!req.user){
-        res.redirect('/');
-      }
-      next();
+        if (!req.user){
+            res.redirect('/');
+        }
+        next();
     });
     bookRouter.route('/')
       .get(function(req, res) {
